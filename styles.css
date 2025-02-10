@@ -1,7 +1,37 @@
 body {
     background-color: rgb(5, 25, 70);
 
-color: rgb(0, 166, 255);
+color: rgb(79, 177, 230);
 font-family: "Dancing Script", serif;
 font-weight: bolder;
 }}
+
+body {
+    margin: 0px;
+}
+main{
+    margin-right: 20px;
+}
+h1{
+    text-align: center;
+}
+.navbar ul{
+    list-style-type: none;
+    background-color: #000000;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+}
+.navbar a{
+    color: rgb(10, 255, 153);
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+}
+.navbar a:hover{
+    background-color: rgb(223, 0, 0);
+}
+.navbar li{
+    float: left;
+}
