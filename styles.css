@@ -30,7 +30,7 @@ h1{
     text-align: center;
 }
 .navbar a:hover{
-    background-color: rgb(223, 0, 0);
+    background-color: rgb(73, 4, 112);
 }
 .navbar li{
     float: left;
