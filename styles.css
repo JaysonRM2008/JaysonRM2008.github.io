@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(5, 25, 70);
+    background-color: rgb(4, 10, 88);
 
 color: rgb(61, 180, 245);
 font-family: "Dancing Script", serif;
@@ -25,28 +25,50 @@ h1{
     overflow: hidden;
 }
 .navbar a{
-    color: rgb(10, 255, 153);
+    color: rgb(0, 250, 146);
     text-decoration: none;
     padding: 15px;
     display: block;
     text-align: center;
 }
 .navbar a:hover{
-    background-color: rgb(73, 4, 112);
+    background-color: rgb(47, 103, 101);
 }
 .navbar li{
     float: left;
 }
-
 #navbar {
     position: sticky;
     top: 0;
     overflow: hidden;
 }
-#navbar a{
+#navbar a {
     float: left;
     display: block;
     text-align: center;
-  padding: 14px;
-  text-decoration: none;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+#navbar a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+#navbar a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+
+.Projects {
+    display: flex
+}
+.Projects :nth-child{
+flex-direction: row-reverse;
+}
+.Projects img{
+    border-radius: 24px;
+}
+.Projects h3{
+    text-align: center;
 }
