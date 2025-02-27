@@ -1,7 +1,7 @@
 body {
-    background-color: rgb(4, 10, 88);
+    background-color: rgb(5, 149, 226);
 
-color: rgb(61, 180, 245);
+color: rgb(1, 1, 1);
 font-family: "Dancing Script", serif;
 font-weight: bolder;
 }}
@@ -21,7 +21,7 @@ h1{
     list-style-type: none;
     background-color: #000000;
     padding: 0px;
-    margin: 0px;
+    margin: -14px;
     overflow: hidden;
 }
 .navbar a{

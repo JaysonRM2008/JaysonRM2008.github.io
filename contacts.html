@@ -17,25 +17,71 @@
     </nav> 
     
 </head>
-<h1>     Hello! My name is Jayson </h1>
+<h1>    This is my Contacts page</h1>
 
 <body>
  
     <main>
-      <h2>This is my Contacts page</h3>
- <p>
+ <h2>
     Contact me thought here.
- </p>
+ </h2>
 
- <h3>Emails</h3>
-<p>
-jaysonramirez429@gmail.com or jramirez@brooklynsteamcenter.org
-</p>
- 
-<h4>Social Media</h4>
-<p>
-    Instagram: @thejaysonramirez
-    </p>
+ <form
+    action="https://form-to-email.steam-center.workers.dev/"
+    method="post"
+    >
+  
+  <input hidden type="text" name="send-to" value="jramirez@brooklynsteamcenter.org">
+
+    <label>Firest Name:</label>
+<br>
+
+<input type="text" required name="first_name"/>
+<br>
+
+    <label> Last Name: </label>
+    <br>
+
+    <input type="text" required name="last_name"/>
+<br>
+
+    <label> Email:</label>
+<br>
+    <input type="text" required name="email"/>
+<br>
+
+    <label> Phone Number</label>
+<br>
+
+<input type="tel" required name="phone"/>
+<br>
+
+<label> Why are you reaching out</label>
+<br>
+
+<input type="text" required name="reaching_out"/>
+<br>
+
+<label> Occupations</label> 
+<br>
+
+<input type="text" required name="job"/>
+<br>
+
+<label>Gender </label>
+<br>
+<input type="radio" name="gender" value="male"> <label> Male</label> <br>
+
+<input type="radio" name="gender" value="female"> <label> Female</label>
+<br>
+
+<input type="radio" name="gender" value="non_binary"> <label> Non-binary</label>
+<br>
+
+<input type="Submit">
+<input type="Reset">
+
+ </form> 
 
     </main>
 
