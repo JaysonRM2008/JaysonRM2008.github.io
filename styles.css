@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(5, 149, 226);
+    background-color: rgb(102, 189, 235);
 
 color: rgb(1, 1, 1);
 font-family: "Dancing Script", serif;
@@ -25,7 +25,7 @@ h1{
     overflow: hidden;
 }
 .navbar a{
-    color: rgb(0, 250, 146);
+    color: rgb(0, 102, 255);
     text-decoration: none;
     padding: 15px;
     display: block;
