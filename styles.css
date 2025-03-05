@@ -1,10 +1,10 @@
 body {
-    background-color: rgb(102, 189, 235);
+    background-color: rgba(14, 137, 204, 0.958);
 
-color: rgb(1, 1, 1);
+color: rgb(0, 0, 0);
 font-family: "Dancing Script", serif;
 font-weight: bolder;
-}}
+}
 
 body {
     margin: 0px;
@@ -21,7 +21,7 @@ h1{
     list-style-type: none;
     background-color: #000000;
     padding: 0px;
-    margin: -8px;
+    margin: -9px;
     overflow: hidden;
 }
 .navbar a{
@@ -46,9 +46,9 @@ h1{
     float: left;
     display: block;
     text-align: center;
-    padding: 16px 16px;
+    padding: 19px 16px;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 16px;
   }
   
 .navbar a:hover {
