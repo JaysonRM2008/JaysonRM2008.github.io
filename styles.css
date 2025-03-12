@@ -17,7 +17,7 @@ h1{
 }
 .me {
 color: rgb(15, 103, 254);
-}
+text-shadow:1px 1px 10px rgb(5, 51, 238), 1px 1px 10px rgb(2, 44, 255);}
 
 .navbar ul{
     list-style-type: none;
@@ -54,7 +54,7 @@ color: rgb(15, 103, 254);
   }
   
 .navbar a:hover {
-    background-color: #ddd;
+    background-color: rgb(4, 222, 145);
     color: black;
   }
 .navbar a.active {
