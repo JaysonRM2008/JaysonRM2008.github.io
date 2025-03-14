@@ -15,9 +15,18 @@ main{
 h1{
     text-align: center;
 }
-.me {
-color: rgb(15, 103, 254);
-text-shadow:1px 1px 10px rgb(5, 51, 238), 1px 1px 10px rgb(2, 44, 255);}
+
+
+.light{
+    color: rgb(51, 121, 240);
+    text-shadow:1px 1px 10px rgb(5, 51, 238), 1px 1px 10px rgb(0, 8, 251);}
+
+.sblue{
+   color: rgb(51, 121, 240);
+    text-shadow:1px 1px 10px rgb(5, 37, 165), 1px 1px 10px rgb(0, 8, 255)
+}
+
+
 
 .navbar ul{
     list-style-type: none;
