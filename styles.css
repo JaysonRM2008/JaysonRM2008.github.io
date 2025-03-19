@@ -91,4 +91,14 @@ flex-direction: row-reverse;
 .nav {
     flex-direction: column; 
   }
+
+  .vb {
+    color: rgb(255, 255, 255);
+  }
+  .soho {
+    color: rgb(136, 0, 255);
+  }
   
+  .sf {
+    color: rgb(4, 113, 99);
+  }
