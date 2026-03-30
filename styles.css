@@ -1,138 +1,126 @@
 body {
-    background-color: rgba(0, 0, 0, 0.951);
-
-color: rgb(23, 135, 59);
-font-family: "Dancing Script", serif;
-font-weight: bolder;
+  background-color: rgba(0, 0, 0, 0.95);
+  color: rgb(23, 135, 59);
+  font-family: "Dancing Script", serif;
+  font-weight: bold;
+  margin: 0;
 }
 
-body {
-    margin: 0px;
-}
-main{
-    margin-right: 20px;
-}
-h1{
-    text-align: center;
+/* Headings */
+h1 {
+  text-align: center;
 }
 
-
-.light{
-    color: rgb(51, 121, 240);
-    text-shadow:1px 1px 10px rgb(3, 24, 255), 1px 1px 10px rgb(0, 8, 251);}
-
-.sblue{
-   color: rgb(51, 121, 240);
-    text-shadow:1px 1px 10px rgb(4, 54, 255), 1px 1px 10px rgb(0, 8, 255)
+/* Text styles */
+.light {
+  color: rgb(51, 121, 240);
+  text-shadow: 1px 1px 10px rgb(3, 24, 255);
 }
+
+.sblue {
+  color: rgb(51, 121, 240);
+  text-shadow: 1px 1px 10px rgb(4, 54, 255);
+}
+
 .ECO {
-color: rgb(51, 121, 240);
-text-shadow:1px 1px 10px rgb(4, 54, 255), 1px 1px 10px rgb(0, 8, 255)
+  color: rgb(51, 121, 240);
+  text-shadow: 1px 1px 10px rgb(4, 54, 255);
 }
 
-
-
-.navbar ul{
-    list-style-type: none;
-    background-color: #000000;
-    padding: 0px;
-    margin: -9px;
-    overflow: hidden;
-}
-.navbar a{
-    color: rgb(0, 102, 255);
-    text-decoration: none;
-    padding: 16px;
-    display: block;
-    text-align: center;
-}
-.navbar a:hover{
-    background-color: rgb(98, 12, 236);
-}
-.navbar li{
-    float: left;
-}
+/* NAVBAR */
 .navbar {
-    position: sticky;
-    top: 0;
-    overflow: hidden;
+  position: sticky;
+  top: 0;
+  background-color: black;
 }
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar li {
+  margin: 0;
+}
+
 .navbar a {
-    float: left;
-    display: block;
-    text-align: center;
-    padding: 18px 16px;
-    text-decoration: none;
-    font-size: 16px;
-  }
-  
+  display: block;
+  padding: 18px 16px;
+  color: rgb(0, 102, 255);
+  text-decoration: none;
+  font-size: 16px;
+}
+
 .navbar a:hover {
-    background-color: rgb(4, 222, 145);
-    color: black;
-  }
-.navbar a.active {
-    background-color: #04AA6D;
-    color: white;
-  }
-
-.Projects {
-    display: flex
-}
-.Projects :nth-child{
-flex-direction: row-reverse;
-}
-.Projects img{
-    border-radius: 24px;
-}
-.Projects h3{
-    text-align: center;
+  background-color: rgb(4, 222, 145);
+  color: black;
 }
 
-@media screen and (max-width: 480px) {
-
+/* Project sections */
+section {
+  margin-bottom: 40px;
 }
-  
-.nav {
-    flex-direction: column; 
-  }
 
-  .vb {
-    color: rgb(255, 255, 255);
-  }
-  .soho {
-    color: rgb(136, 0, 255);
-  }
-  
-  .sf {
-    color: rgb(4, 113, 99);
-  }
+section img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 24px;
+  display: block;
+}
 
-  .doc {
-    color: rgb(5, 255, 201);
-  }
+/* Section colors */
+.vb {
+  color: white;
+}
+
+.soho {
+  color: rgb(136, 0, 255);
+}
+
+.sf {
+  color: rgb(4, 113, 99);
+}
+
+.doc {
+  color: rgb(5, 255, 201);
+}
+
+/* Titles */
 .JRM {
-color: rgb(144, 13, 13);
+  color: rgb(144, 13, 13);
+}
 
 text-shadow:1px 1px 10px rgb(255, 255, 255), 1px 1px 10px rgb(22, 22, 22);}
 
 
 
 .qs {
-  color:rgb(85, 0, 255) 
+  color: rgb(85, 0, 255);
 }
 
-.words {
-  color: rgb(0, 248, 219);
-  text-shadow:1px 1px 10px rgb(3, 24, 255), 1px 1px 10px rgb(0, 8, 251);}
+/* Layout */
+main {
+  padding: 20px;
+}
 
-.title {
-  color: rgb(255, 255, 255);
-  text-shadow:1px 1px 10px rgb(156, 1, 1), 1px 1px 10px rgb(177, 0, 242);}
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #111;
+  margin-top: 40px;
+}
 
-  .t2 {color: rgb(255, 0, 0);
-    text-shadow:1px 1px 10px rgb(26, 73, 135), 1px 1px 10px rgb(21, 254, 157);}
-  
+/* Mobile */
+@media screen and (max-width: 480px) {
+  .navbar ul {
+    flex-direction: column;
+  }
 
-.ECO {
-  
+  .navbar a {
+    text-align: center;
+  }
 }
