@@ -1,4 +1,7 @@
-/* GLOBAL RESET */
+/* GOOGLE FONT IMPORT (add this in your HTML <head>) */
+/* <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet"> */
+
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -9,46 +12,53 @@
 body {
   background: linear-gradient(135deg, #0a0a0a, #121212);
   color: #e0f7ff;
-  font-family: "Dancing Script", cursive;
-  font-weight: bold;
+  font-family: "Poppins", sans-serif;
   line-height: 1.6;
+  scroll-behavior: smooth;
 }
 
 /* HEADINGS */
-h1, h2, h3 {
-  text-align: center;
-  margin: 20px 0;
+h1 {
+  font-family: "Dancing Script", cursive;
+  font-size: 3rem;
 }
 
+h2 {
+  font-size: 2rem;
+  margin-top: 30px;
+}
+
+h3 {
+  font-size: 1.4rem;
+}
+
+/* GLOW NAME */
 .JRM {
   color: #00ffd5;
+  text-align: center;
   text-shadow: 0 0 10px #00ffd5, 0 0 20px #00aaff;
   animation: glow 2s infinite alternate;
 }
 
 /* GLOW ANIMATION */
 @keyframes glow {
-  from {
-    text-shadow: 0 0 10px #00ffd5;
-  }
-  to {
-    text-shadow: 0 0 25px #00aaff, 0 0 40px #00ffd5;
-  }
+  from { text-shadow: 0 0 10px #00ffd5; }
+  to { text-shadow: 0 0 30px #00aaff, 0 0 50px #00ffd5; }
 }
 
 /* TEXT */
-.light, .sblue, .ECO {
-  color: #8ecbff;
-  text-shadow: 0 0 8px #0077ff;
+.light {
+  color: #bdeaff;
+  margin: 15px 0;
 }
 
 /* NAVBAR */
 .navbar {
   position: sticky;
   top: 0;
-  background: rgba(0, 0, 0, 0.85);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 2px 20px rgba(0,0,0,0.6);
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 30px rgba(0,0,0,0.6);
   z-index: 1000;
 }
 
@@ -59,48 +69,71 @@ h1, h2, h3 {
 }
 
 .navbar a {
-  display: block;
   padding: 15px 25px;
   color: #00e5ff;
   text-decoration: none;
-  font-size: 16px;
-  transition: all 0.3s ease;
+  font-weight: 500;
+  position: relative;
 }
 
-.navbar a:hover {
+/* COOL UNDERLINE HOVER */
+.navbar a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: 5px;
+  left: 50%;
   background: #00ffd5;
-  color: black;
-  transform: scale(1.1);
+  transition: 0.3s;
 }
 
-/* MAIN CONTENT */
+.navbar a:hover::after {
+  width: 80%;
+  left: 10%;
+}
+
+/* MAIN */
 main {
-  padding: 30px;
-  max-width: 1000px;
+  padding: 40px 20px;
+  max-width: 1100px;
   margin: auto;
+}
+
+/* PROJECT CARDS */
+section {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 20px;
+  margin: 25px 0;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px rgba(0,255,255,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 30px rgba(0,255,255,0.2);
 }
 
 /* IMAGES */
 .project-img {
   width: 100%;
   max-width: 500px;
+  margin: 15px auto;
   display: block;
-  margin: 20px auto;
-  border-radius: 20px;
-  box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
-  transition: transform 0.3s, box-shadow 0.3s;
+  border-radius: 15px;
+  transition: 0.3s;
 }
 
 .project-img:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 25px rgba(0, 255, 255, 0.7);
 }
 
 /* LIST */
 ol {
   margin: 20px auto;
   max-width: 500px;
-  padding-left: 20px;
 }
 
 ol li {
@@ -120,10 +153,15 @@ footer {
   background: #111;
   margin-top: 40px;
   color: #aaa;
+  font-size: 14px;
 }
 
 /* MOBILE */
-@media screen and (max-width: 480px) {
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+
   .navbar ul {
     flex-direction: column;
   }
