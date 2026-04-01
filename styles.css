@@ -9,7 +9,7 @@ body {
   color: #e0f7ff;
   font-family: "Poppins", sans-serif;
   line-height: 1.6;
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; /* May remove if issues arise with anchor links */
 }
 
 /* HEADINGS */
@@ -133,6 +133,11 @@ section:hover {
   box-shadow: 0 0 15px #00ffd5;
 }
 
+.btn:focus, .navbar a:focus {
+  outline: 3px solid #00aaff; /* Focus state for accessibility */
+  outline-offset: 3px;
+}
+
 /* SKILL BARS */
 .skill {
   margin: 15px 0;
@@ -173,10 +178,20 @@ section:hover {
 /* FOOTER */
 footer {
   text-align: center;
-  padding: 20px;
+  padding: 30px;
   background: #111;
   color: #aaa;
   margin-top: 40px;
+}
+
+footer a {
+  color: #00e5ff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+footer a:hover {
+  color: #00ffd5;
 }
 
 /* MOBILE */
@@ -192,5 +207,13 @@ footer {
   .navbar a {
     text-align: center;
     width: 100%;
+  }
+
+  .projects {
+    grid-template-columns: 1fr; /* Single column layout on small screens */
+  }
+
+  footer {
+    padding: 20px;
   }
 }
