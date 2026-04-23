@@ -1,133 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
   <meta charset="UTF-8"> 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Curriculum Vitae - Jayson Ramirez Marin</title>
+  <title>Curriculum Vitae</title>
 
   <link rel="stylesheet" href="styles.css">
-  <link rel="shortcut icon" href="/pics/Logo-2.png" type="image/x-icon">
+  <link rel="shortcut icon" href="/pics/Logo-2.png">
 
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Dancing+Script&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<!-- NAVBAR -->
 <nav class="navbar">
   <ul> 
     <li><a href="index.html">Home</a></li>
     <li><a href="about.html">About Me</a></li>
-    <li><a href="Curriculum.html">Curriculum</a></li>
+    <li><a href="curriculum.html">Curriculum</a></li>
     <li><a href="contacts.html">Contact Me</a></li>
   </ul>
 </nav>
 
-<!-- LOGO -->
-<img src="Logo-2.png" alt="Logo"
-style="float:right;width:200px;height:200px;">
-
 <main>
 
-  <h1 class="fade-in">Curriculum Vitae</h1>
-  <hr>
+<h1 class="fade-in">Curriculum Vitae</h1>
 
-  <!-- PROFILE -->
-  <section class="fade-in">
-    <h2>Profile</h2>
-    <p class="words">
-      I am responsible, hardworking, and an active listener who is looking for a position that will strengthen my skills and technical abilities. I work well in teams and independently.
-    </p>
-  </section>
+<section class="fade-in">
+  <h2>Profile</h2>
+  <p class="words">
+    Responsible and hardworking student looking to strengthen technical skills.
+  </p>
+</section>
 
-  <!-- CERTIFICATIONS -->
-  <section class="fade-in">
-    <h2>Certifications</h2>
-    <ul>
-      <li>OSHA 10-Hour General Industry</li>
-      <li>HTML & CSS</li>
-    </ul>
-  </section>
+<section class="fade-in">
+  <h2>Certifications</h2>
+  <ul>
+    <li>OSHA 10-Hour General Industry</li>
+    <li>HTML & CSS</li>
+  </ul>
+</section>
 
-  <!-- WORK EXPERIENCE -->
-  <section class="fade-in">
-    <h2>Work Experience</h2>
+<section class="fade-in">
+  <h2>Work Experience</h2>
 
-    <h3>Apprentice - Beam Center</h3>
-    <p class="words">
-      60 Sackett St, Brooklyn, NY 11231 <br>
-      February 2025 – May 2025 <br><br>
-      Worked on creative projects including pillows, music cubes, lamps, and jewelry while being mentored by peer leaders.
-    </p>
+  <h3>Apprentice - Beam Center</h3>
+  <p class="words">February 2025 – May 2025</p>
 
-    <h3>Summer Studio Participant</h3>
-    <p class="words">
-      Beam Summer Studio, Governor’s Island <br>
-      July 2025 – August 2025 <br><br>
-      Participated in hands-on projects like making candles, clay work, and food science experiments in a team-based environment.
-    </p>
+  <h3>Summer Studio Participant</h3>
+  <p class="words">July 2025 – August 2025</p>
+</section>
 
-  </section>
+<section class="fade-in">
+  <h2>Skills</h2>
 
-  <!-- SKILLS -->
-  <section class="fade-in">
-    <h2>Skills</h2>
-
-    <div class="skill">
-      <p>HTML</p>
-      <div class="skill-bar">
-        <div class="skill-fill" style="width:90%"></div>
-      </div>
+  <div class="skill">
+    <p>HTML</p>
+    <div class="skill-bar">
+      <div class="skill-fill" style="width:90%"></div>
     </div>
+  </div>
 
-    <div class="skill">
-      <p>CSS</p>
-      <div class="skill-bar">
-        <div class="skill-fill" style="width:85%"></div>
-      </div>
+  <div class="skill">
+    <p>CSS</p>
+    <div class="skill-bar">
+      <div class="skill-fill" style="width:85%"></div>
     </div>
+  </div>
 
-    <div class="skill">
-      <p>JavaScript</p>
-      <div class="skill-bar">
-        <div class="skill-fill" style="width:70%"></div>
-      </div>
-    </div>
-
-    <div class="skill">
-      <p>GitHub</p>
-      <div class="skill-bar">
-        <div class="skill-fill" style="width:75%"></div>
-      </div>
-    </div>
-
-    <div class="skill">
-      <p>Problem Solving</p>
-      <div class="skill-bar">
-        <div class="skill-fill" style="width:95%"></div>
-      </div>
-    </div>
-
-  </section>
+</section>
 
 </main>
 
-<!-- ANIMATION SCRIPT -->
 <script>
-  const elements = document.querySelectorAll(".fade-in");
+const elements = document.querySelectorAll(".fade-in");
 
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = 1;
-        entry.target.style.transform = "translateY(0)";
-      }
-    });
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
   });
+});
 
-  elements.forEach(el => observer.observe(el));
+elements.forEach(el => observer.observe(el));
 </script>
 
 </body>

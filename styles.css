@@ -1,15 +1,16 @@
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* BODY */
 body {
   background: linear-gradient(135deg, #0a0a0a, #121212);
   color: #e0f7ff;
   font-family: "Poppins", sans-serif;
   line-height: 1.6;
-  scroll-behavior: smooth; /* May remove if issues arise with anchor links */
 }
 
 /* HEADINGS */
@@ -38,6 +39,15 @@ h3 {
 @keyframes glow {
   from { text-shadow: 0 0 10px #00ffd5; }
   to { text-shadow: 0 0 30px #00aaff, 0 0 50px #00ffd5; }
+}
+
+/* TEXT STYLES */
+.light {
+  color: #bdefff;
+}
+
+.words {
+  color: #ccefff;
 }
 
 /* NAVBAR */
@@ -87,7 +97,13 @@ main {
   padding: 40px 20px;
 }
 
-/* SECTIONS (CARDS) */
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+/* SECTIONS */
 section {
   background: rgba(255, 255, 255, 0.05);
   border-radius: 20px;
@@ -101,6 +117,13 @@ section {
 section:hover {
   transform: translateY(-5px);
   box-shadow: 0 0 30px rgba(0,255,255,0.2);
+}
+
+/* PROJECT GRID */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
 }
 
 /* IMAGES */
@@ -119,13 +142,15 @@ section:hover {
 .btn {
   display: inline-block;
   padding: 10px 20px;
-  margin-top: 10px;
+  margin-top: 15px;
   border-radius: 20px;
   background: linear-gradient(90deg, #00ffd5, #00aaff);
   color: black;
   font-weight: bold;
   text-decoration: none;
   transition: 0.3s;
+  border: none;
+  cursor: pointer;
 }
 
 .btn:hover {
@@ -133,9 +158,36 @@ section:hover {
   box-shadow: 0 0 15px #00ffd5;
 }
 
-.btn:focus, .navbar a:focus {
-  outline: 3px solid #00aaff; /* Focus state for accessibility */
-  outline-offset: 3px;
+/* FORMS */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+input {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+
+input:focus {
+  box-shadow: 0 0 10px #00ffd5;
+}
+
+/* ICONS */
+.icon a {
+  margin: 10px;
+  display: inline-block;
+  color: #00e5ff;
+  transition: 0.3s;
+}
+
+.icon a:hover {
+  color: #00ffd5;
+  transform: scale(1.2);
 }
 
 /* SKILL BARS */
@@ -163,16 +215,10 @@ section:hover {
   transition: all 0.8s ease;
 }
 
+/* THIS WAS MISSING (VERY IMPORTANT) */
 .fade-in.show {
   opacity: 1;
   transform: translateY(0);
-}
-
-/* PROJECT GRID */
-.projects {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 25px;
 }
 
 /* FOOTER */
@@ -187,7 +233,6 @@ footer {
 footer a {
   color: #00e5ff;
   text-decoration: none;
-  margin: 0 10px;
 }
 
 footer a:hover {
@@ -205,15 +250,11 @@ footer a:hover {
   }
 
   .navbar a {
-    text-align: center;
     width: 100%;
+    text-align: center;
   }
 
   .projects {
-    grid-template-columns: 1fr; /* Single column layout on small screens */
-  }
-
-  footer {
-    padding: 20px;
+    grid-template-columns: 1fr;
   }
 }
