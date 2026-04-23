@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"> 
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>About </title>
 
   <link rel="stylesheet" href="styles.css">
   <link rel="shortcut icon" href="/pics/Logo-2.png">
 
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Dancing+Script&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
 <nav class="navbar">
-  <ul>
+  <ul> 
     <li><a href="index.html">Home</a></li>
     <li><a href="about.html">About Me</a></li>
     <li><a href="curriculum.html">Curriculum</a></li>
@@ -26,49 +24,37 @@
 
 <main>
 
-<section class="fade-in">
+<section class="section fade-in">
   <h1 class="JRM">About Me</h1>
   <p class="light">
-    I'm a 17-year-old Mexican-American student from Brooklyn, NY.
-    I’m currently a senior in high school and in my second year of Full-Stack Development.
+    I'm a senior in high school studying full-stack development. I enjoy coding and cooking.
   </p>
 </section>
 
-<section class="fade-in">
-  <h2>My Learning Journey</h2>
+<section class="section fade-in">
+  <h2>Education</h2>
   <p class="light">
-    At the STEAM Center, I’ve been developing skills in Python, Flask, and web development.
+    I attend the High School for Global Citizenship and the Brooklyn STEAM Center.
   </p>
 </section>
 
-<section class="fade-in">
-  <h2>My Schools</h2>
-
-  <img src="Brooklyn-STEAM_71620.00.0_Ext-Entrance.jpg" class="project-img">
-  <img src="high-school-for-global-citizenship-brooklyn-ny-2-schoolphoto.jpg" class="project-img">
-</section>
-
-<section class="fade-in">
+<section class="section fade-in">
   <h2>Fun Facts</h2>
-
-  <ol class="sblue">
-    <li>I like learning history</li>
-    <li>I enjoy zombie shows</li>
+  <ul>
     <li>I love cooking</li>
-    <li>I like weird food combinations</li>
-  </ol>
-</section>
-
-<section class="fade-in" style="text-align:center;">
-  <h2>Let’s Connect</h2>
-  <a href="contacts.html" class="btn">Contact Me</a>
+    <li>I enjoy zombie movies</li>
+    <li>I like learning history</li>
+  </ul>
 </section>
 
 </main>
 
+<footer>
+  <p>&copy; 2026 Jayson Ramirez Marin</p>
+</footer>
+
 <script>
 const elements = document.querySelectorAll(".fade-in");
-
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -76,7 +62,6 @@ const observer = new IntersectionObserver(entries => {
     }
   });
 });
-
 elements.forEach(el => observer.observe(el));
 </script>
 

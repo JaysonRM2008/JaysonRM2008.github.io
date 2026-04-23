@@ -1,19 +1,48 @@
-/* RESET */
+/* =========================
+   1. RESET
+========================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* BODY */
+/* =========================
+   2. ROOT VARIABLES
+========================= */
+:root {
+  --bg-main: #0a0f1c;
+  --bg-secondary: #111827;
+  --card-bg: rgba(255, 255, 255, 0.05);
+
+  --primary: #00ffd5;
+  --secondary: #3b82f6;
+
+  --text-main: #e6f1ff;
+  --text-light: #9fbad6;
+
+  --radius: 18px;
+}
+
+/* =========================
+   3. BASE
+========================= */
 body {
-  background: linear-gradient(135deg, #0a0a0a, #121212);
-  color: #e0f7ff;
   font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, var(--bg-main), var(--bg-secondary));
+  color: var(--text-main);
   line-height: 1.6;
 }
 
-/* HEADINGS */
+main {
+  max-width: 1100px;
+  margin: auto;
+  padding: 50px 20px;
+}
+
+/* =========================
+   4. TYPOGRAPHY
+========================= */
 h1 {
   font-family: "Dancing Script", cursive;
   font-size: 3rem;
@@ -22,40 +51,26 @@ h1 {
 
 h2 {
   font-size: 2rem;
-  margin-top: 30px;
+  margin-bottom: 10px;
 }
 
 h3 {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
 }
 
-/* GLOW NAME */
-.JRM {
-  color: #00ffd5;
-  text-shadow: 0 0 10px #00ffd5, 0 0 20px #00aaff;
-  animation: glow 2s infinite alternate;
-}
-
-@keyframes glow {
-  from { text-shadow: 0 0 10px #00ffd5; }
-  to { text-shadow: 0 0 30px #00aaff, 0 0 50px #00ffd5; }
-}
-
-/* TEXT STYLES */
 .light {
-  color: #bdefff;
+  color: var(--text-light);
 }
 
-.words {
-  color: #ccefff;
-}
-
-/* NAVBAR */
+/* =========================
+   5. NAVBAR
+========================= */
 .navbar {
   position: sticky;
   top: 0;
-  background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(14px);
+  background: rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
   z-index: 1000;
 }
 
@@ -63,15 +78,18 @@ h3 {
   display: flex;
   justify-content: center;
   list-style: none;
-  flex-wrap: wrap;
 }
 
 .navbar a {
   padding: 15px 25px;
-  color: #00e5ff;
+  color: var(--text-main);
   text-decoration: none;
-  font-weight: 500;
   position: relative;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: var(--primary);
 }
 
 .navbar a::after {
@@ -81,7 +99,7 @@ h3 {
   height: 2px;
   bottom: 5px;
   left: 50%;
-  background: #00ffd5;
+  background: var(--primary);
   transition: 0.3s;
 }
 
@@ -90,156 +108,154 @@ h3 {
   left: 10%;
 }
 
-/* LAYOUT */
-main {
-  max-width: 1100px;
-  margin: auto;
-  padding: 40px 20px;
-}
-
-/* HERO */
+/* =========================
+   6. HERO
+========================= */
 .hero {
   text-align: center;
-  padding: 60px 20px;
+  padding: 80px 20px;
 }
 
-/* SECTIONS */
-section {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 20px;
-  padding: 20px;
-  margin: 25px 0;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 0 20px rgba(0,255,255,0.08);
-  transition: transform 0.3s, box-shadow 0.3s;
+.JRM {
+  color: var(--primary);
+  text-shadow: 0 0 15px var(--primary), 0 0 30px var(--secondary);
 }
 
-section:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 30px rgba(0,255,255,0.2);
-}
-
-/* PROJECT GRID */
-.projects {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 25px;
-}
-
-/* IMAGES */
-.project-img {
-  width: 100%;
-  border-radius: 15px;
+.hero p {
   margin-top: 10px;
+}
+
+/* =========================
+   7. SECTIONS (GLASS CARDS)
+========================= */
+.section {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 25px;
+  margin: 25px 0;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.05);
   transition: 0.3s;
 }
 
-.project-img:hover {
-  transform: scale(1.05);
+.section:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0,255,213,0.15);
 }
 
-/* BUTTON */
+/* =========================
+   8. PROJECT GRID
+========================= */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 15px;
+  transition: 0.3s;
+}
+
+.project-card:hover {
+  transform: scale(1.03);
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 12px;
+  margin-top: 10px;
+}
+
+/* =========================
+   9. BUTTONS
+========================= */
 .btn {
   display: inline-block;
   padding: 10px 20px;
   margin-top: 15px;
-  border-radius: 20px;
-  background: linear-gradient(90deg, #00ffd5, #00aaff);
+  border-radius: 25px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
   color: black;
   font-weight: bold;
   text-decoration: none;
   transition: 0.3s;
-  border: none;
-  cursor: pointer;
 }
 
 .btn:hover {
   transform: scale(1.1);
-  box-shadow: 0 0 15px #00ffd5;
+  box-shadow: 0 0 15px var(--primary);
 }
 
-/* FORMS */
+/* =========================
+   10. FORM
+========================= */
 form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  margin-top: 20px;
+  gap: 12px;
 }
 
 input {
-  padding: 10px;
+  padding: 12px;
   border-radius: 10px;
   border: none;
-  outline: none;
+  background: rgba(255,255,255,0.08);
+  color: white;
 }
 
 input:focus {
-  box-shadow: 0 0 10px #00ffd5;
+  outline: none;
+  box-shadow: 0 0 10px var(--primary);
 }
 
-/* ICONS */
-.icon a {
-  margin: 10px;
-  display: inline-block;
-  color: #00e5ff;
-  transition: 0.3s;
-}
-
-.icon a:hover {
-  color: #00ffd5;
-  transform: scale(1.2);
-}
-
-/* SKILL BARS */
-.skill {
-  margin: 15px 0;
-}
-
+/* =========================
+   11. SKILLS
+========================= */
 .skill-bar {
   width: 100%;
   height: 10px;
-  background: #222;
+  background: #1f2937;
   border-radius: 10px;
-  overflow: hidden;
+  margin-bottom: 15px;
 }
 
 .skill-fill {
   height: 100%;
-  background: linear-gradient(90deg, #00ffd5, #0077ff);
+  border-radius: 10px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
 }
 
-/* FADE ANIMATION */
+/* =========================
+   12. FOOTER
+========================= */
+footer {
+  text-align: center;
+  padding: 25px;
+  margin-top: 40px;
+  background: #0d1322;
+  color: #aaa;
+}
+
+/* =========================
+   13. ANIMATION
+========================= */
 .fade-in {
   opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s ease;
+  transform: translateY(20px);
+  transition: 0.8s ease;
 }
 
-/* THIS WAS MISSING (VERY IMPORTANT) */
 .fade-in.show {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 30px;
-  background: #111;
-  color: #aaa;
-  margin-top: 40px;
-}
-
-footer a {
-  color: #00e5ff;
-  text-decoration: none;
-}
-
-footer a:hover {
-  color: #00ffd5;
-}
-
-/* MOBILE */
+/* =========================
+   14. MOBILE
+========================= */
 @media (max-width: 600px) {
   h1 {
     font-size: 2rem;
@@ -250,11 +266,7 @@ footer a:hover {
   }
 
   .navbar a {
-    width: 100%;
     text-align: center;
-  }
-
-  .projects {
-    grid-template-columns: 1fr;
+    width: 100%;
   }
 }

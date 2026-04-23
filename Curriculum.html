@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"> 
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Curriculum Vitae</title>
+  <title>Curriculum - Jayson Ramirez Marin</title>
 
   <link rel="stylesheet" href="styles.css">
   <link rel="shortcut icon" href="/pics/Logo-2.png">
@@ -25,57 +24,27 @@
 
 <main>
 
-<h1 class="fade-in">Curriculum Vitae</h1>
+<section class="section fade-in">
+  <h1>Curriculum Vitae</h1>
+</section>
 
-<section class="fade-in">
+<section class="section fade-in">
   <h2>Profile</h2>
-  <p class="words">
-    Responsible and hardworking student looking to strengthen technical skills.
-  </p>
+  <p class="light">Hardworking student developing technical skills.</p>
 </section>
 
-<section class="fade-in">
-  <h2>Certifications</h2>
-  <ul>
-    <li>OSHA 10-Hour General Industry</li>
-    <li>HTML & CSS</li>
-  </ul>
-</section>
-
-<section class="fade-in">
-  <h2>Work Experience</h2>
-
-  <h3>Apprentice - Beam Center</h3>
-  <p class="words">February 2025 – May 2025</p>
-
-  <h3>Summer Studio Participant</h3>
-  <p class="words">July 2025 – August 2025</p>
-</section>
-
-<section class="fade-in">
-  <h2>Skills</h2>
-
-  <div class="skill">
-    <p>HTML</p>
-    <div class="skill-bar">
-      <div class="skill-fill" style="width:90%"></div>
-    </div>
-  </div>
-
-  <div class="skill">
-    <p>CSS</p>
-    <div class="skill-bar">
-      <div class="skill-fill" style="width:85%"></div>
-    </div>
-  </div>
-
-</section>
+<section class="section fade-in">
+  <h2>Education</h2>
+  <p class="light">High School for Global Citizenship, Brooklyn STEAM Center.</p>
 
 </main>
 
+<footer>
+  <p>&copy; 2026 Jayson Ramirez Marin</p>
+</footer>
+
 <script>
 const elements = document.querySelectorAll(".fade-in");
-
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -83,7 +52,6 @@ const observer = new IntersectionObserver(entries => {
     }
   });
 });
-
 elements.forEach(el => observer.observe(el));
 </script>
 

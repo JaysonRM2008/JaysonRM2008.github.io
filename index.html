@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title> Homepage </title>
+  <title>Homepage</title>
 
   <link rel="stylesheet" href="styles.css">
   <link rel="shortcut icon" href="/pics/Logo-2.png">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Dancing+Script&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -19,32 +20,43 @@
     <li><a href="curriculum.html">Curriculum</a></li>
     <li><a href="contacts.html">Contact Me</a></li>
   </ul>
-</nav> 
+</nav>
+
+<header class="hero fade-in">
+  <h1 class="JRM">Jayson Ramirez Marin</h1>
+  <p class="light">Student | Developer</p>
+  <a href="about.html" class="btn">Learn More</a>
+</header>
 
 <main>
 
-<section class="hero fade-in">
-  <h1 class="JRM">Jayson Ramirez Marin</h1>
-  <p class="light">Student | Creator</p>
-  <a href="about.html" class="btn">Learn More About Me</a>
-</section>
-
-<section class="fade-in">
+<section class="section fade-in">
+  <h2>About Me</h2>
   <p class="light">
-    I'm a 17-year-old Mexican-American from Brooklyn, NY...
+    I'm a 17-year-old Mexican-American student from Brooklyn, NY, focused on full-stack development and culinary arts.
   </p>
 </section>
 
-<h2 class="fade-in">Projects</h2>
+<section class="section fade-in">
+  <h2>Projects</h2>
 
-<div class="projects">
+  <div class="projects">
 
-  <article>
-    <h3>Vision Board</h3>
-    <img src="/pics/Jayson Ramirez-Personal Website_ Vision Board.jpg" class="project-img">
-  </article>
+    <div class="project-card">
+      <h3>Vision Board</h3>
+      <img src="/pics/Jayson Ramirez-Personal Website_ Vision Board.jpg">
+      <p>Planning my website layout and design.</p>
+    </div>
 
-</div>
+    <div class="project-card">
+      <h3>SOHO Network</h3>
+      <img src="/pics/Screen Shot 2025-03-18 at 12.51.52 PM.png">
+      <p>Network flow from modem to devices.</p>
+    </div>
+
+  </div>
+
+</section>
 
 </main>
 
@@ -54,7 +66,6 @@
 
 <script>
 const elements = document.querySelectorAll(".fade-in");
-
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -62,7 +73,6 @@ const observer = new IntersectionObserver(entries => {
     }
   });
 });
-
 elements.forEach(el => observer.observe(el));
 </script>
 
