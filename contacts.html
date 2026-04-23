@@ -11,8 +11,9 @@
 
 <body>
 
-<nav class="navbar">
-  <ul> 
+<!-- NAVBAR -->
+<nav class="top-nav">
+  <ul class="nav-list"> 
     <li><a href="index.html">Home</a></li>
     <li><a href="about.html">About Me</a></li>
     <li><a href="curriculum.html">Curriculum</a></li>
@@ -22,38 +23,43 @@
 
 <main>
 
-<section class="section fade-in">
-  <h1 class="JRM">Contact Me</h1>
+<!-- CONTACT SECTION -->
+<section class="content-block animate-fade">
+  <h1 class="main-title">Contact Me</h1>
 
-  <form action="https://form-to-email.steam-center.workers.dev/" method="post">
+  <form class="contact-form" action="https://form-to-email.steam-center.workers.dev/" method="post">
 
     <input type="hidden" name="send-to" value="jramirez@brooklynsteamcenter.org">
 
-    <input type="text" name="first_name" placeholder="First Name" required>
-    <input type="text" name="last_name" placeholder="Last Name" required>
-    <input type="email" name="email" placeholder="Email" required>
+    <input class="form-input" type="text" name="first_name" placeholder="First Name" required>
+    <input class="form-input" type="text" name="last_name" placeholder="Last Name" required>
+    <input class="form-input" type="email" name="email" placeholder="Email" required>
 
-    <input type="submit" class="btn" value="Send">
+    <input type="submit" class="primary-btn" value="Send">
   </form>
 
 </section>
 
 </main>
 
-<footer>
+<!-- FOOTER -->
+<footer class="site-footer">
   <p>&copy; 2026 Jayson Ramirez Marin</p>
 </footer>
 
+<!-- ANIMATION SCRIPT -->
 <script>
-const elements = document.querySelectorAll(".fade-in");
-const observer = new IntersectionObserver(entries => {
+const fadeItems = document.querySelectorAll(".animate-fade");
+
+const scrollObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      entry.target.classList.add("show");
+      entry.target.classList.add("visible");
     }
   });
 });
-elements.forEach(el => observer.observe(el));
+
+fadeItems.forEach(item => scrollObserver.observe(item));
 </script>
 
 </body>

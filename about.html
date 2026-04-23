@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About </title>
+  <title>About</title>
 
   <link rel="stylesheet" href="styles.css">
   <link rel="shortcut icon" href="/pics/Logo-2.png">
@@ -13,8 +13,9 @@
 
 <body>
 
-<nav class="navbar">
-  <ul> 
+<!-- NAVBAR -->
+<nav class="top-nav">
+  <ul class="nav-list"> 
     <li><a href="index.html">Home</a></li>
     <li><a href="about.html">About Me</a></li>
     <li><a href="curriculum.html">Curriculum</a></li>
@@ -24,23 +25,26 @@
 
 <main>
 
-<section class="section fade-in">
-  <h1 class="JRM">About Me</h1>
-  <p class="light">
+<!-- ABOUT -->
+<section class="content-block animate-fade">
+  <h1 class="main-title">About Me</h1>
+  <p class="text-light">
     I'm a senior in high school studying full-stack development. I enjoy coding and cooking.
   </p>
 </section>
 
-<section class="section fade-in">
-  <h2>Education</h2>
-  <p class="light">
+<!-- EDUCATION -->
+<section class="content-block animate-fade">
+  <h2 class="section-title">Education</h2>
+  <p class="text-light">
     I attend the High School for Global Citizenship and the Brooklyn STEAM Center.
   </p>
 </section>
 
-<section class="section fade-in">
-  <h2>Fun Facts</h2>
-  <ul>
+<!-- FUN FACTS -->
+<section class="content-block animate-fade">
+  <h2 class="section-title">Fun Facts</h2>
+  <ul class="fun-list">
     <li>I love cooking</li>
     <li>I enjoy zombie movies</li>
     <li>I like learning history</li>
@@ -49,20 +53,24 @@
 
 </main>
 
-<footer>
+<!-- FOOTER -->
+<footer class="site-footer">
   <p>&copy; 2026 Jayson Ramirez Marin</p>
 </footer>
 
+<!-- ANIMATION SCRIPT -->
 <script>
-const elements = document.querySelectorAll(".fade-in");
-const observer = new IntersectionObserver(entries => {
+const fadeItems = document.querySelectorAll(".animate-fade");
+
+const scrollObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      entry.target.classList.add("show");
+      entry.target.classList.add("visible");
     }
   });
 });
-elements.forEach(el => observer.observe(el));
+
+fadeItems.forEach(item => scrollObserver.observe(item));
 </script>
 
 </body>

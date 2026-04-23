@@ -13,8 +13,9 @@
 
 <body>
 
-<nav class="navbar">
-  <ul> 
+<!-- NAVBAR -->
+<nav class="top-nav">
+  <ul class="nav-list"> 
     <li><a href="index.html">Home</a></li>
     <li><a href="about.html">About Me</a></li>
     <li><a href="curriculum.html">Curriculum</a></li>
@@ -22,35 +23,38 @@
   </ul>
 </nav>
 
-<header class="hero fade-in">
-  <h1 class="JRM">Jayson Ramirez Marin</h1>
-  <p class="light">Student | Developer</p>
-  <a href="about.html" class="btn">Learn More</a>
+<!-- HERO -->
+<header class="hero-section animate-fade">
+  <h1 class="main-title">Jayson Ramirez Marin</h1>
+  <p class="subtitle">Student | Developer</p>
+  <a href="about.html" class="primary-btn">Learn More</a>
 </header>
 
 <main>
 
-<section class="section fade-in">
-  <h2>About Me</h2>
-  <p class="light">
+<!-- ABOUT -->
+<section class="content-block animate-fade">
+  <h2 class="section-title">About Me</h2>
+  <p class="text-light">
     I'm a 17-year-old Mexican-American student from Brooklyn, NY, focused on full-stack development and culinary arts.
   </p>
 </section>
 
-<section class="section fade-in">
-  <h2>Projects</h2>
+<!-- PROJECTS -->
+<section class="content-block animate-fade">
+  <h2 class="section-title">Projects</h2>
 
-  <div class="projects">
+  <div class="card-container">
 
-    <div class="project-card">
+    <div class="card-item">
       <h3>Vision Board</h3>
-      <img src="/pics/Jayson Ramirez-Personal Website_ Vision Board.jpg">
+      <img src="/pics/Jayson Ramirez-Personal Website_ Vision Board.jpg" alt="Vision Board">
       <p>Planning my website layout and design.</p>
     </div>
 
-    <div class="project-card">
+    <div class="card-item">
       <h3>SOHO Network</h3>
-      <img src="/pics/Screen Shot 2025-03-18 at 12.51.52 PM.png">
+      <img src="/pics/Screen Shot 2025-03-18 at 12.51.52 PM.png" alt="Network Diagram">
       <p>Network flow from modem to devices.</p>
     </div>
 
@@ -60,20 +64,24 @@
 
 </main>
 
-<footer>
+<!-- FOOTER -->
+<footer class="site-footer">
   <p>&copy; 2026 Jayson Ramirez Marin</p>
 </footer>
 
+<!-- ANIMATION SCRIPT -->
 <script>
-const elements = document.querySelectorAll(".fade-in");
-const observer = new IntersectionObserver(entries => {
+const fadeItems = document.querySelectorAll(".animate-fade");
+
+const scrollObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      entry.target.classList.add("show");
+      entry.target.classList.add("visible");
     }
   });
 });
-elements.forEach(el => observer.observe(el));
+
+fadeItems.forEach(item => scrollObserver.observe(item));
 </script>
 
 </body>

@@ -58,14 +58,14 @@ h3 {
   font-size: 1.3rem;
 }
 
-.light {
+.text-light {
   color: var(--text-light);
 }
 
 /* =========================
-   5. NAVBAR
+   5. NAVBAR (UPDATED)
 ========================= */
-.navbar {
+.top-nav {
   position: sticky;
   top: 0;
   backdrop-filter: blur(14px);
@@ -74,13 +74,13 @@ h3 {
   z-index: 1000;
 }
 
-.navbar ul {
+.nav-list {
   display: flex;
   justify-content: center;
   list-style: none;
 }
 
-.navbar a {
+.nav-list a {
   padding: 15px 25px;
   color: var(--text-main);
   text-decoration: none;
@@ -88,11 +88,11 @@ h3 {
   transition: 0.3s;
 }
 
-.navbar a:hover {
+.nav-list a:hover {
   color: var(--primary);
 }
 
-.navbar a::after {
+.nav-list a::after {
   content: "";
   position: absolute;
   width: 0%;
@@ -103,7 +103,7 @@ h3 {
   transition: 0.3s;
 }
 
-.navbar a:hover::after {
+.nav-list a:hover::after {
   width: 80%;
   left: 10%;
 }
@@ -111,24 +111,20 @@ h3 {
 /* =========================
    6. HERO
 ========================= */
-.hero {
+.hero-section {
   text-align: center;
   padding: 80px 20px;
 }
 
-.JRM {
+.main-title {
   color: var(--primary);
   text-shadow: 0 0 15px var(--primary), 0 0 30px var(--secondary);
 }
 
-.hero p {
-  margin-top: 10px;
-}
-
 /* =========================
-   7. SECTIONS (GLASS CARDS)
+   7. CONTENT BLOCKS (REPLACES .section)
 ========================= */
-.section {
+.content-block {
   background: var(--card-bg);
   border-radius: var(--radius);
   padding: 25px;
@@ -138,32 +134,32 @@ h3 {
   transition: 0.3s;
 }
 
-.section:hover {
+.content-block:hover {
   transform: translateY(-6px);
   box-shadow: 0 10px 30px rgba(0,255,213,0.15);
 }
 
 /* =========================
-   8. PROJECT GRID
+   8. PROJECTS
 ========================= */
-.projects {
+.card-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
 }
 
-.project-card {
+.card-item {
   background: var(--card-bg);
   border-radius: var(--radius);
   padding: 15px;
   transition: 0.3s;
 }
 
-.project-card:hover {
+.card-item:hover {
   transform: scale(1.03);
 }
 
-.project-card img {
+.card-item img {
   width: 100%;
   border-radius: 12px;
   margin-top: 10px;
@@ -172,7 +168,7 @@ h3 {
 /* =========================
    9. BUTTONS
 ========================= */
-.btn {
+.primary-btn {
   display: inline-block;
   padding: 10px 20px;
   margin-top: 15px;
@@ -184,7 +180,7 @@ h3 {
   transition: 0.3s;
 }
 
-.btn:hover {
+.primary-btn:hover {
   transform: scale(1.1);
   box-shadow: 0 0 15px var(--primary);
 }
@@ -192,13 +188,13 @@ h3 {
 /* =========================
    10. FORM
 ========================= */
-form {
+.contact-form {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
 
-input {
+.form-input {
   padding: 12px;
   border-radius: 10px;
   border: none;
@@ -206,32 +202,26 @@ input {
   color: white;
 }
 
-input:focus {
+.form-input:focus {
   outline: none;
   box-shadow: 0 0 10px var(--primary);
 }
 
 /* =========================
-   11. SKILLS
+   11. FUN LIST
 ========================= */
-.skill-bar {
-  width: 100%;
-  height: 10px;
-  background: #1f2937;
-  border-radius: 10px;
-  margin-bottom: 15px;
+.fun-list {
+  padding-left: 20px;
 }
 
-.skill-fill {
-  height: 100%;
-  border-radius: 10px;
-  background: linear-gradient(90deg, var(--primary), var(--secondary));
+.fun-list li {
+  margin-bottom: 8px;
 }
 
 /* =========================
    12. FOOTER
 ========================= */
-footer {
+.site-footer {
   text-align: center;
   padding: 25px;
   margin-top: 40px;
@@ -240,15 +230,15 @@ footer {
 }
 
 /* =========================
-   13. ANIMATION
+   13. ANIMATION (UPDATED)
 ========================= */
-.fade-in {
+.animate-fade {
   opacity: 0;
   transform: translateY(20px);
   transition: 0.8s ease;
 }
 
-.fade-in.show {
+.animate-fade.visible {
   opacity: 1;
   transform: translateY(0);
 }
@@ -261,11 +251,11 @@ footer {
     font-size: 2rem;
   }
 
-  .navbar ul {
+  .nav-list {
     flex-direction: column;
   }
 
-  .navbar a {
+  .nav-list a {
     text-align: center;
     width: 100%;
   }

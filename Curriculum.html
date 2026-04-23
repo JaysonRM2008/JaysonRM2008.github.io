@@ -13,8 +13,9 @@
 
 <body>
 
-<nav class="navbar">
-  <ul> 
+<!-- NAVBAR -->
+<nav class="top-nav">
+  <ul class="nav-list"> 
     <li><a href="index.html">Home</a></li>
     <li><a href="about.html">About Me</a></li>
     <li><a href="curriculum.html">Curriculum</a></li>
@@ -24,35 +25,45 @@
 
 <main>
 
-<section class="section fade-in">
-  <h1>Curriculum Vitae</h1>
+<!-- TITLE -->
+<section class="content-block animate-fade">
+  <h1 class="main-title">Curriculum Vitae</h1>
 </section>
 
-<section class="section fade-in">
-  <h2>Profile</h2>
-  <p class="light">Hardworking student developing technical skills.</p>
+<!-- PROFILE -->
+<section class="content-block animate-fade">
+  <h2 class="section-title">Profile</h2>
+  <p class="text-light">Hardworking student developing technical skills.</p>
 </section>
 
-<section class="section fade-in">
-  <h2>Education</h2>
-  <p class="light">High School for Global Citizenship, Brooklyn STEAM Center.</p>
+<!-- EDUCATION -->
+<section class="content-block animate-fade">
+  <h2 class="section-title">Education</h2>
+  <p class="text-light">
+    High School for Global Citizenship, Brooklyn STEAM Center.
+  </p>
+</section>
 
 </main>
 
-<footer>
+<!-- FOOTER -->
+<footer class="site-footer">
   <p>&copy; 2026 Jayson Ramirez Marin</p>
 </footer>
 
+<!-- ANIMATION SCRIPT -->
 <script>
-const elements = document.querySelectorAll(".fade-in");
-const observer = new IntersectionObserver(entries => {
+const fadeItems = document.querySelectorAll(".animate-fade");
+
+const scrollObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      entry.target.classList.add("show");
+      entry.target.classList.add("visible");
     }
   });
 });
-elements.forEach(el => observer.observe(el));
+
+fadeItems.forEach(item => scrollObserver.observe(item));
 </script>
 
 </body>
